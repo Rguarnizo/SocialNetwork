@@ -1,4 +1,4 @@
-# Go Microservices Mockup
+# Go Microservices SocialMedia
 
 Arquitectura y codigo para prueba tecnica en Golang, prototipo RedSocial.
 
