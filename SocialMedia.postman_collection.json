@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "9397a4f7-4cf9-4905-ba55-2568e8a981bf",
+		"name": "SocialMedia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13443784",
+		"_collection_link": "https://dark-crater-329309.postman.co/workspace/Finmaq-%257C-Tech~ed375ce4-7883-4010-9ff6-273e2b174278/collection/13443784-9397a4f7-4cf9-4905-ba55-2568e8a981bf?action=share&source=collection_link&creator=13443784"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"test@test.com\",\n    \"password\":\"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/auth/login?user=test@test.com&password=123456",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "test@test.com"
+						},
+						{
+							"key": "password",
+							"value": "123456"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPosts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJleHAiOjE3Njc3OTg5NzgsInN1YiI6ImUwMGEyMzQ0LTQwMTEtNDQzMi1iYmFkLTgzYWEwN2Y2NzY1MSJ9.5fL6Da8rnwytjalzUXjATfxYnIGX8Am3-PlE916LMGc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9090/posts",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreatePost",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJleHAiOjE3Njc3OTg5NzgsInN1YiI6ImUwMGEyMzQ0LTQwMTEtNDQzMi1iYmFkLTgzYWEwN2Y2NzY1MSJ9.5fL6Da8rnwytjalzUXjATfxYnIGX8Am3-PlE916LMGc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"content\":\"Esta es una publicación de prueba\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9090/post",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProfile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJleHAiOjE3Njc4MTEzMzUsInN1YiI6IjFkZTYxY2JmLTU3MTktNGY3MC05ZmJjLTkxYWMzMjc1ZTZmZiJ9.18RFZzgHIcmg-s0KxIFz5XOpqzvGWgdGsiZ0Zs5dCs4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:7070/profile/me",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"profile",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LikePost",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
